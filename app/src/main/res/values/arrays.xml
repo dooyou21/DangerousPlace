@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category1">
+        <item>[분류]</item>
+        <item>기타</item>
+        <item>성범죄</item>
+        <item>폭력</item>
+        <item>도난</item>
+    </string-array>
+</resources>

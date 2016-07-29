@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll1"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@color/themeGreen">
+
+        <ImageView
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/imgprof"
+            android:background="@drawable/profile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvname"
+            android:text="위험모드/푸시알림 설정"
+            android:textColor="@color/themeWhite"
+            android:textSize="30dp"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ll1"
+        android:id="@+id/ll2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="위험문자전송모드"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swSendMessage"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll2"
+        android:id="@+id/ll3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="위치추적모드"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swTracking"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.18" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_below="@+id/ll3"
+        android:id="@+id/ll4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/darker_gray">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll4"
+        android:id="@+id/ll5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="푸시알림받기"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swPushAlert"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/ll5"
+        android:id="@+id/ll6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/darker_gray">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveSetting"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textSize="30sp"
+        android:text="확인"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+
+
+</RelativeLayout>

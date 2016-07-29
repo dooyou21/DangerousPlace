@@ -1,0 +1,36 @@
+//{"project_info":{"project_id":"dangerousplace-59035","project_number":"1094629114590","name":"DangerousPlace"},"client":[{"client_info":{"mobilesdk_app_id":"1:1094629114590:android:f38e6be0496a37ca","client_id":"android:capston.stol.dangerousplace","client_type":1,"android_client_info":{"package_name":"capston.stol.dangerousplace"}},"oauth_client":[{"client_id":"1094629114590-jnsumc4jqcnu5hgb6arfu71amgjneja6.apps.googleusercontent.com","client_type":1,"android_info":{"package_name":"capston.stol.dangerousplace","certificate_hash":"CCE2EACC8F44EDEC5D29777EC0029025F02E1BDB"}}],"api_key":[],"services":{"analytics_service":{"status":1},"cloud_messaging_service":{"status":1,"apns_config":[]},"appinvite_service":{"status":1,"other_platform_oauth_client":[]},"google_signin_service":{"status":2},"ads_service":{"status":1}}}],"client_info":[],"ARTIFACT_VERSION":"1"}
+{
+  "project_info": {
+    "project_number": "187031721254",
+    "project_id": "dangerousplace-1321"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187031721254:android:f38e6be0496a37ca",
+        "android_client_info": {
+          "package_name": "capston.stol.dangerousplace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAymmirJkmpcJ_6GPGgfxud8OLWlG56i3w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

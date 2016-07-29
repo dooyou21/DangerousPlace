@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/themeGreen"
+    tools:context="capston.stol.dangerousplace.SavePathActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intro_center"
+            android:layout_margin="30dp"
+            android:layout_marginBottom="10dp"/>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_info"
+                android:id="@+id/ivNoti"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/themeWhite"
+                android:text="알림!"
+                android:id="@+id/tvNotification"
+                android:textSize="30sp"
+                android:layout_toRightOf="@+id/ivNoti"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/themeWhite"
+                android:layout_below="@+id/tvNotification"
+                android:layout_marginTop="20sp"
+                android:textSize="20sp"
+                android:id="@+id/tvnoti1"
+                android:text="'확인'버튼을 누르면 '여수해'어플로 돌아갑니다."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/themeWhite"
+                android:layout_below="@+id/tvnoti1"
+                android:layout_marginTop="5sp"
+                android:textSize="18sp"
+                android:text="저장된 경로는\n '메뉴>MyPage>내 경로 보기'\n 에서 확인할 수 있습니다."/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_ok"
+            android:id="@+id/btnOK"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

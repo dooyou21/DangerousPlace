@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainMapActivity">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res/capston.stol.dangerousplace"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="30dp"
+        sothree:umanoShadowHeight="4dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_menuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff393c46"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:textColor="#ff000000" >
+
+                <!-- include -->
+
+                <include
+                    android:id="@+id/ic_leftslidemenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/leftslidemenu" />
+
+            </LinearLayout>
+
+            <!-- slide layout -->
+
+            <LinearLayout
+                android:id="@+id/ll_mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.nhn.android.maps.NMapView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/mapView" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay">
+                    </RelativeLayout>
+
+                    <ImageView
+                    android:id="@+id/imgleft"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/menu_icon" />
+
+                    <ImageView
+                        android:id="@+id/imgMyLoc"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_location_icon" />
+
+                    <ImageView
+                        android:id="@+id/imgadd"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/add_icon" />
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_empty"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent" >
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llTop3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <TextView
+                android:id="@+id/top3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|top"
+                android:text="TOP 3"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:background="@drawable/susangamount"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/content1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight = "1"
+                android:gravity="center|top"
+                android:text="CONTENT 1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight = "1"
+                android:gravity="center|top"
+                android:text="CONTENT 2"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/content3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight = "1"
+                android:gravity="center|top"
+                android:text="CONTENT 3"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlIntroImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeGreen" >
+
+        <ImageView
+            android:id="@+id/ivIntro"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/intro_center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIntro"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/themeWhite"
+            android:textSize="20sp"
+            android:text="정보를 불러오는 중입니다"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

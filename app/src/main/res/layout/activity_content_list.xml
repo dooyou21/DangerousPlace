@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize = "10dp"
+        android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="성범죄"
+                android:id="@+id/ctg1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#054950"
+                android:paddingLeft="10px" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/list1"
+                android:layout_marginTop = "10dp"
+                android:divider="#000000"
+                android:dividerHeight="1px" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="폭력"
+                android:id="@+id/ctg2"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#054950"
+                android:paddingLeft="10px" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/list2"
+                android:layout_marginTop = "10dp"
+                android:divider="#000000"
+                android:dividerHeight="1px" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="도난"
+                android:id="@+id/ctg3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#054950"
+                android:paddingLeft="10px" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/list3"
+                android:layout_marginTop = "10dp"
+                android:divider="#000000"
+                android:dividerHeight="1px" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="기타"
+                android:id="@+id/ctg4"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#054950"
+                android:paddingLeft="10px" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/list4"
+                android:layout_marginTop = "10dp"
+                android:divider="#000000"
+                android:dividerHeight="1px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
