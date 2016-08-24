@@ -2,16 +2,19 @@ package capston.stol.dangerousplace.util;
 
 /**
  * Created by 이수정 on 2015-12-30.
+ * 
+ * 
+ * Modify by sbpark on 2016-08-24.
  */
 public class Constant {
     public static final class KEY {
-//        public static final String NMAPAPIKEY = "c52bd0ce704151a593aedfe77d32946d";
-        public static final String NMAPCLIENTID = "qriFxY4YpvOj15zMVM30";
+
+        public static final String NMAPCLIENTID = "NaverMap Client ID";
     }
 
     public static final class URL {
         //BASE
-        public static final String Base = "http://114.70.235.39:9999/DangerousPlace/";
+        public static final String Base = "Server IP and URL";
         //DETAIL
         public static final String GoogleSignIn = "user/regist?";
         public static final String WarningInfoView = "warning/view?";
