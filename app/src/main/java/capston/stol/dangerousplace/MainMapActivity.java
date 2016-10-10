@@ -128,9 +128,6 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
     // 겹친 아이템들의 아이디들을 전송하기 위해 저장하는 array list
     private ArrayList<String> contents = new ArrayList<String>();
 
-    //사용하지않음
-//    private DefaultDialog gpsEnableDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -226,27 +223,7 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
         }
     }
 
-    //사용하지않음. 기본 alert dialog를 사용함.
-//    private View.OnClickListener goToSettingListener = new View.OnClickListener() {
-//        public void onClick(View v) {
-//            gpsEnableDialog.dismiss();
-//            Intent goToSettings = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-//            startActivity(goToSettings);
-//            rlIntroImage.setVisibility(View.VISIBLE);
-//            needRefresh = true;
-//        }
-//    };
-//
-//    private View.OnClickListener cancelListener = new View.OnClickListener() {//취소. gps 허용 안함
-//        public void onClick(View v) {
-//            gpsEnableDialog.dismiss();
-//            lat = 37.8688359;
-//            lng = 127.7377907;
-//            new getWarningInfoListAsyncTask().execute(Double.toString(lat), Double.toString(lng));
-//        }
-//    };
-
-    /*for left slide menu*/
+    /*init UI(left slide menu and down drawer)*/
     private void initSlideMenu() {
 
         //init left menu width
@@ -388,7 +365,9 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
 
     @Override
     protected void onStop() {
-        mMapLocationManager.disableMyLocation();
+        if (mMyLocationOverlay != null) {
+            mMapLocationManager.disableMyLocation();
+        }
         super.onStop();
     }
 
@@ -432,8 +411,6 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
             }
         }
 
-        //수정 필요
-        //downdrawer열려있을때 back키 누르면 downdrawer들어가야함
     }
 
     @Override
@@ -673,6 +650,11 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
+            Log.i("disableMyLocation", "oo");
+            if (mMyLocationOverlay != null) {
+                mMapLocationManager.disableMyLocation();
+            }
+
             mOverlayManager.clearOverlays();
 
             /***************오버레이 관리자 ****************/
@@ -718,8 +700,6 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
                 poiDataOverlay.setOnStateChangeListener(onPOIdataStateChangeListener);
                 //overlay event
                 mOverlayManager.setOnCalloutOverlayListener(onCalloutOverlayListener);
-
-                mMapLocationManager.disableMyLocation();
 
                 Arrays.fill(top3_arr, 0);
 
@@ -820,7 +800,9 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
         public void onLocationUpdateTimeout(NMapLocationManager locationManager) {
 
             Toast.makeText(MainMapActivity.this, "timeout", Toast.LENGTH_LONG).show();
-//            mMapLocationManager.disableMyLocation(); 탐색실패에도 이놈이 필요한가? 실패했다는거자체가 이미 disabled인거면 안써도되는건데.
+            if (mMyLocationOverlay != null) {
+                mMapLocationManager.disableMyLocation();
+            }
             //default좌표(강원대학교 한빛관)를 기반으로 WarningInfoList를 받아온다.
             new getWarningInfoListAsyncTask().execute("37.8688359", "127.7377907");
         }
@@ -831,7 +813,9 @@ public class MainMapActivity extends NMapActivity implements View.OnClickListene
 
             Toast.makeText(MainMapActivity.this, "unavailable location", Toast.LENGTH_LONG).show();
 
-            mMapLocationManager.disableMyLocation();
+            if (mMyLocationOverlay != null) {
+                mMapLocationManager.disableMyLocation();
+            }
             //default좌표(강원대학교 한빛관)를 기반으로 WarningInfoList를 받아온다.
             new getWarningInfoListAsyncTask().execute("37.8688359", "127.7377907");
         }
